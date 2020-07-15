@@ -1,0 +1,23 @@
+.FirstClass {
+  font-size: 45px;
+  font-family: fantasy;
+  color: blueviolet;
+}
+
+.SecondClass {
+  font-size: 15px;
+  font-family: monospace;
+  color: cyan;
+}
+
+.ThirdClass {
+  font-size: 75px;
+  font-family: 'Times New Roman';
+  color: rgb(255, 208, 0);
+}
+
+button {
+  border-radius: 14px;
+  padding: 5px;
+  margin: 5px;
+}

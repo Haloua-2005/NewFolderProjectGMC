@@ -1,0 +1,11 @@
+<p
+[ngClass]="{
+  'FirstClass':FirstClassbool,
+  'SecondClass':SecondClassbool,
+  'ThirdClass':ThirdClassbool
+}"
+>This Paragraph is changing when you click a button</p>
+
+<button (click)="Change(true,false,false)" >First Class</button>
+<button (click)="Change(false,true,false)">Second Class</button>
+<button (click)="Change(false,false,true)">Third Class</button>

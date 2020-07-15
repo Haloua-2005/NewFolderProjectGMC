@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "GMC2"
+    }
+  },
+  "defaultProject": "GMC2",
+  "cli": {
+    "analytics": false
+  }
 }
