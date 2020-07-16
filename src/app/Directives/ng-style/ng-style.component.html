@@ -1,10 +1,12 @@
-<p
+<p appHighlightDirective [in]="'Green'" [out]="'DarkOrange'"
 [ngClass]="{
   'FirstClass':FirstClassbool,
   'SecondClass':SecondClassbool,
   'ThirdClass':ThirdClassbool
 }"
 >This Paragraph is changing when you click a button</p>
+<br>
+<input appHighlightDirective>
 
 <button (click)="Change(true,false,false)" >First Class</button>
 <button (click)="Change(false,true,false)">Second Class</button>
