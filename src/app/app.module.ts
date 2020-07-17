@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgStyleComponent } from './Directives/ng-style/ng-style.component';
 import { HighlightDirectiveDirective } from './Directives/highlight-directive.directive';
+import { NgIfComponent } from './ng-if/ng-if.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgStyleComponent,
-    HighlightDirectiveDirective
+    HighlightDirectiveDirective,
+    NgIfComponent
   ],
   imports: [
     BrowserModule,
