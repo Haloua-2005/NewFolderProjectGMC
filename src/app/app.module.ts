@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NgStyleComponent } from './Directives/ng-style/ng-style.component';
 import { HighlightDirectiveDirective } from './Directives/highlight-directive.directive';
 import { NgIfComponent } from './ng-if/ng-if.component';
+import { AttributesComponent } from './attributes/attributes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgStyleComponent,
     HighlightDirectiveDirective,
-    NgIfComponent
+    NgIfComponent,
+    AttributesComponent
   ],
   imports: [
     BrowserModule,

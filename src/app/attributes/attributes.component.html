@@ -1,0 +1,30 @@
+<ul  class="list-group"> CVs
+<div class="row">
+  <div class="col-mid-6">
+    <li (click)="First()" class="list-group-item">
+      {{Ahmed.FirstName}}
+    </li>
+    <li (click)="Second()" class="list-group-item">
+      {{Aymen.FirstName}}
+    </li>
+  </div>
+  <div class="col-mid-6">
+    <div *ngIf=theHidden2 class="ahmed">
+      <li *ngFor="let lists of theList2" class="list-group-item">
+        <img src="{{lists.Image}}">
+        {{lists.FirstName}}
+        {{lists.Name}} <br>
+        {{lists.Occupation}}
+      </li>
+    </div>
+    <div *ngIf=theHidden1 class="aymen">
+      <li *ngFor="let lists of theList1" class="list-group-item">
+        <img src="{{lists.Image}}">
+        {{lists.FirstName}}
+        {{lists.Name}} <br>
+        {{lists.Occupation}}
+      </li>
+    </div>
+  </div>
+</div>
+</ul>
