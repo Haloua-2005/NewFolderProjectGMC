@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoServiceService } from '../Services/todo-service.service';
 
 @Component({
   selector: 'app-ng-if',
@@ -7,17 +8,45 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgIfComponent implements OnInit {
 
-  theurl=''
+  theBool:boolean = false
 
-  theBool:boolean = true
+  thevalue = ""
+
+  Valeur = [];
+
+  NewValue:number;
 
   remove() {
    this.theBool = !this.theBool
   }
 
-  constructor() { }
+  constructor(
+    private todoList: TodoServiceService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  Show() {
+    this.Valeur = this.todoList.TodoList
+    this.theBool = this.todoList.Bool
+    this.todoList.show()
+  }
+
+
+  Push(value){
+    if (value == "" && value === value) {
+      alert("Please Type in the Input")
+    } else {
+      this.todoList.push(value)
+    }
+    this.Valeur = this.todoList.TodoList
+    console.log(this.Valeur)
+  }
+
+  Delete(NewValue) {
+    this.todoList.delete(NewValue)
+    this.Valeur = this.todoList.TodoList
   }
 
 }

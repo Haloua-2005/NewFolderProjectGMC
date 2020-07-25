@@ -1,5 +1,20 @@
-<p *ngIf=theBool>Don't remove me PLEASE 😧 </p>
+<p *ngIf=false>Don't remove me PLEASE 😧 </p>
 <br>
-<button (click)="remove()" >Click Me !</button>
+<button *ngIf=false (click)="remove()" >Click Me !</button>
 <br>
-<img src="{{theurl|defaultImage}}">
+<img *ngIf=false src="{{theurl|defaultImage}}">
+
+<input type="text" [(ngModel)]="thevalue">
+<input type="number" [(ngModel)]="NewValue" >
+<br>
+<button (click)="Push(thevalue)" >Add</button>
+<button (click)="Delete(NewValue)" >Remove</button>
+<button (click)="Show()" >Show the Todo List</button>
+<br>
+<ol *ngIf='theBool' >
+  <li *ngFor="let list of Valeur" >
+    {{list}}
+  </li>
+</ol>
+
+

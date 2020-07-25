@@ -8,6 +8,7 @@ import { HighlightDirectiveDirective } from './Directives/highlight-directive.di
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { AttributesComponent } from './attributes/attributes.component';
 import { DefaultImagePipe } from './default-image.pipe';
+import {FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DefaultImagePipe } from './default-image.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
