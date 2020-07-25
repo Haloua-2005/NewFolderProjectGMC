@@ -7,6 +7,7 @@ import { NgStyleComponent } from './Directives/ng-style/ng-style.component';
 import { HighlightDirectiveDirective } from './Directives/highlight-directive.directive';
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { AttributesComponent } from './attributes/attributes.component';
+import { DefaultImagePipe } from './default-image.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AttributesComponent } from './attributes/attributes.component';
     NgStyleComponent,
     HighlightDirectiveDirective,
     NgIfComponent,
-    AttributesComponent
+    AttributesComponent,
+    DefaultImagePipe
   ],
   imports: [
     BrowserModule,

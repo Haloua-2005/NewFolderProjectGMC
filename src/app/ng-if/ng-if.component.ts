@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgIfComponent implements OnInit {
 
+  theurl=''
+
   theBool:boolean = true
 
   remove() {
