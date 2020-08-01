@@ -1,0 +1,23 @@
+
+<div class="row">
+  <div  class="col-mid-6">
+    <ul class="list-group"> <h2> |~~ CVs ~~| </h2>
+      <li class="list-group-item tt" *ngFor="let list of theCVlist;let indice=index">
+        {{list.Name}}
+        {{list.FirstName}} /
+        {{list.Occupation}}
+        <button (click)="push(indice)" >Embaucher</button>
+      </li>
+    </ul>
+  </div>
+  <div class="col-mid-6">
+    <ul class="list-group" > <h2> |~~ Hired CVs ~~| </h2>
+      <li class="list-group-item tt" *ngFor="let list of theHireList">
+        {{list.Name}}
+        {{list.FirstName}}
+        {{list.Occupation}}
+        ✔️
+      </li>
+    </ul>
+  </div>
+</div>

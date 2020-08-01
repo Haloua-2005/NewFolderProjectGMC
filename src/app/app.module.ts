@@ -8,7 +8,8 @@ import { HighlightDirectiveDirective } from './Directives/highlight-directive.di
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { AttributesComponent } from './attributes/attributes.component';
 import { DefaultImagePipe } from './default-image.pipe';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { CVsComponent } from './cvs/cvs.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {FormsModule} from '@angular/forms'
     HighlightDirectiveDirective,
     NgIfComponent,
     AttributesComponent,
-    DefaultImagePipe
+    DefaultImagePipe,
+    CVsComponent
   ],
   imports: [
     BrowserModule,
