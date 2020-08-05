@@ -9,7 +9,8 @@ import { NgIfComponent } from './ng-if/ng-if.component';
 import { AttributesComponent } from './attributes/attributes.component';
 import { DefaultImagePipe } from './default-image.pipe';
 import {FormsModule} from '@angular/forms';
-import { CVsComponent } from './cvs/cvs.component'
+import { CVsComponent } from './cvs/cvs.component';
+import { RouterSimulatorComponent } from './router-simulator/router-simulator.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CVsComponent } from './cvs/cvs.component'
     NgIfComponent,
     AttributesComponent,
     DefaultImagePipe,
-    CVsComponent
+    CVsComponent,
+    RouterSimulatorComponent
   ],
   imports: [
     BrowserModule,
