@@ -4,12 +4,14 @@ import { NgIf } from '@angular/common';
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { CVsComponent } from './cvs/cvs.component';
 import { NgStyleComponent } from './Directives/ng-style/ng-style.component';
+import { ColorChangerComponent } from './color-changer/color-changer.component';
 
 
 const routes: Routes = [
   { path : 'ngIf', component: NgIfComponent },
   { path : 'cv', component: CVsComponent },
-  { path : 'ngStyle', component: NgStyleComponent }
+  { path : 'ngStyle', component: NgStyleComponent },
+  { path : 'color/:color', component: ColorChangerComponent }
 ];
 
 @NgModule({

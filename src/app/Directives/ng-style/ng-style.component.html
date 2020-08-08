@@ -1,13 +1,20 @@
-<p appHighlightDirective [in]="'Green'" [out]="'DarkOrange'"
-[ngClass]="{
+<div *ngIf="false">
+  <p appHighlightDirective [in]="'Green'" [out]="'DarkOrange'"
+  [ngClass]="{
   'FirstClass':FirstClassbool,
   'SecondClass':SecondClassbool,
   'ThirdClass':ThirdClassbool
-}"
->This Paragraph is changing when you click a button</p>
-<br>
-<input appHighlightDirective>
+  }"
+  >This Paragraph is changing when you click a button</p>
+  <br>
+  <input appHighlightDirective>
 
-<button (click)="Change(true,false,false)" >First Class</button>
-<button (click)="Change(false,true,false)">Second Class</button>
-<button (click)="Change(false,false,true)">Third Class</button>
+  <button (click)="Change(true,false,false)" >First Class</button>
+  <button (click)="Change(false,true,false)">Second Class</button>
+  <button (click)="Change(false,false,true)">Third Class</button>>
+
+</div>
+<br>
+
+<input [(ngModel)]="color" type="color" class="control-form">
+<button (click)="ChangeColor()" class="btn btn-primary">Change Color</button>

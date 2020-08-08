@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-ng-style',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ng-style.component.css']
 })
 export class NgStyleComponent implements OnInit {
+
+  color;
 
   FirstClassbool:boolean = false;
   SecondClassbool:boolean = false;
@@ -17,9 +20,17 @@ export class NgStyleComponent implements OnInit {
     this.ThirdClassbool = value3
   }
 
-  constructor() { }
+  constructor(
+    private route:Router,
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  ChangeColor() {
+    const LINK = ['color',this.color]
+    this.route.navigate(LINK)
+
   }
 
 }

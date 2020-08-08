@@ -10,7 +10,8 @@ import { AttributesComponent } from './attributes/attributes.component';
 import { DefaultImagePipe } from './default-image.pipe';
 import {FormsModule} from '@angular/forms';
 import { CVsComponent } from './cvs/cvs.component';
-import { RouterSimulatorComponent } from './router-simulator/router-simulator.component'
+import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
+import { ColorChangerComponent } from './color-changer/color-changer.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RouterSimulatorComponent } from './router-simulator/router-simulator.co
     AttributesComponent,
     DefaultImagePipe,
     CVsComponent,
-    RouterSimulatorComponent
+    RouterSimulatorComponent,
+    ColorChangerComponent
   ],
   imports: [
     BrowserModule,
