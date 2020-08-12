@@ -12,7 +12,9 @@ import {FormsModule} from '@angular/forms';
 import { CVsComponent } from './cvs/cvs.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 import { ColorChangerComponent } from './color-changer/color-changer.component';
-import { HeaderComponent } from './header/header.component'
+import { HeaderComponent } from './header/header.component';
+import { NF404Component } from './nf404/nf404.component';
+import { DetailsComponent } from './details/details.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { HeaderComponent } from './header/header.component'
     CVsComponent,
     RouterSimulatorComponent,
     ColorChangerComponent,
-    HeaderComponent
+    HeaderComponent,
+    NF404Component,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

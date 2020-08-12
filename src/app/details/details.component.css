@@ -1,0 +1,15 @@
+img {
+  border-radius: 33%;
+  width: 150px;
+  height: 150px;
+}
+
+button {
+  width: 15%;
+  height: 7%;
+  background-color: brown;
+}
+
+body {
+  text-align: center;
+}
