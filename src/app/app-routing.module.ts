@@ -8,10 +8,12 @@ import { ColorChangerComponent } from './color-changer/color-changer.component';
 
 
 const routes: Routes = [
-  { path : 'ngIf', component: NgIfComponent },
-  { path : 'cv', component: CVsComponent },
-  { path : 'ngStyle', component: NgStyleComponent },
-  { path : 'color/:color', component: ColorChangerComponent }
+  { path : 'cv', component: CVsComponent, children: [
+    { path : 'ngIf', component: NgIfComponent },
+  ] },
+  { path : 'ngStyle', component: NgStyleComponent, children:[
+    {path : 'color/:color', component: ColorChangerComponent}
+  ] },
 ];
 
 @NgModule({

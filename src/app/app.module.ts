@@ -11,7 +11,8 @@ import { DefaultImagePipe } from './default-image.pipe';
 import {FormsModule} from '@angular/forms';
 import { CVsComponent } from './cvs/cvs.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
-import { ColorChangerComponent } from './color-changer/color-changer.component'
+import { ColorChangerComponent } from './color-changer/color-changer.component';
+import { HeaderComponent } from './header/header.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ColorChangerComponent } from './color-changer/color-changer.component'
     DefaultImagePipe,
     CVsComponent,
     RouterSimulatorComponent,
-    ColorChangerComponent
+    ColorChangerComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

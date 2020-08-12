@@ -28,7 +28,7 @@ export class NgStyleComponent implements OnInit {
   }
 
   ChangeColor() {
-    const LINK = ['color',this.color]
+    const LINK = ['ngStyle/color',this.color]
     this.route.navigate(LINK)
 
   }

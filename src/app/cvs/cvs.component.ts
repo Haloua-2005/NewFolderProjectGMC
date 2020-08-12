@@ -45,4 +45,8 @@ export class CVsComponent implements OnInit {
 
   }
 
+  goTO() {
+    const LINK=['cv/ngIf']
+    this.router.navigate(LINK)
+  }
 }
