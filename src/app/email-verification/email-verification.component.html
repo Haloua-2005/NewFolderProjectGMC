@@ -1,0 +1,24 @@
+<form #theForm = "ngForm">
+  <input
+  type="text"
+  ngModel
+  required
+  email
+  #FirstInput='ngModel'
+  name="email-Input"
+  class="form-control"
+  placeholder="Email"
+  > <br>
+  <input
+  type="password"
+  ngModel
+  required
+  #SecondInput="ngModel"
+  name="password-Input"
+  class="form-control"
+  placeholder="Password"
+  minlength=4
+  maxlength=8
+  > <br>
+  <button [disabled]="theForm.invalid" class="btn-success" >Log In</button>
+</form>

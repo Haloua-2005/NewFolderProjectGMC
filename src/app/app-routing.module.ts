@@ -7,6 +7,7 @@ import { NgStyleComponent } from './Directives/ng-style/ng-style.component';
 import { ColorChangerComponent } from './color-changer/color-changer.component';
 import { NF404Component } from './nf404/nf404.component';
 import { DetailsComponent } from './details/details.component';
+import { EmailVerificationComponent } from './email-verification/email-verification.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path : 'ngStyle', component: NgStyleComponent, children:[
     {path : 'color/:color', component: ColorChangerComponent}
   ] },
-  { path : 'details/:person', component: DetailsComponent }
+  { path : 'details/:person', component: DetailsComponent },
+  { path : 'login', component: EmailVerificationComponent }
 
 ];
 

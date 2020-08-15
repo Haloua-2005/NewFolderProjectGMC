@@ -14,7 +14,8 @@ import { RouterSimulatorComponent } from './router-simulator/router-simulator.co
 import { ColorChangerComponent } from './color-changer/color-changer.component';
 import { HeaderComponent } from './header/header.component';
 import { NF404Component } from './nf404/nf404.component';
-import { DetailsComponent } from './details/details.component'
+import { DetailsComponent } from './details/details.component';
+import { EmailVerificationComponent } from './email-verification/email-verification.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DetailsComponent } from './details/details.component'
     ColorChangerComponent,
     HeaderComponent,
     NF404Component,
-    DetailsComponent
+    DetailsComponent,
+    EmailVerificationComponent
   ],
   imports: [
     BrowserModule,
