@@ -8,7 +8,11 @@
   name="email-Input"
   class="form-control"
   placeholder="Email"
-  > <br>
+  >
+  <div class="alert alert-danger" *ngIf='FirstInput.invalid && FirstInput.touched' >
+    ❗ Veuillez mettre un email correcte
+  </div>
+  <br>
   <input
   type="password"
   ngModel
@@ -17,8 +21,11 @@
   name="password-Input"
   class="form-control"
   placeholder="Password"
-  minlength=4
-  maxlength=8
-  > <br>
+  minlength=6
+  >
+  <div class="alert alert-danger" *ngIf='SecondInput.touched && SecondInput.invalid' >
+    ❗ Veuillez saisir 6 caractères ou plus
+  </div>
+  <br>
   <button [disabled]="theForm.invalid" class="btn-success" >Log In</button>
 </form>

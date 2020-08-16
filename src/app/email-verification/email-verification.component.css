@@ -2,3 +2,13 @@ input.ng-invalid.ng-touched {
   border: 1px red solid;
 }
 
+.EmailInput.ng-invalid.ng-touched.ng-dirty {
+  border: 1px red solid;
+}
+
+fieldset {
+  color: rgb(212,0,0);
+  background-color: rgb(246,115,115);
+  width: fit-content;
+}
+
