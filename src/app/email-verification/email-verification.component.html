@@ -1,31 +1,31 @@
 <form #theForm = "ngForm">
-  <input
-  type="text"
-  ngModel
-  required
-  email
-  #FirstInput='ngModel'
-  name="email-Input"
-  class="form-control"
-  placeholder="Email"
+  <div
+    ngModelGroup="dataLogin"
+    #dataLogin = "ngModelGroup"
   >
-  <div class="alert alert-danger" *ngIf='FirstInput.invalid && FirstInput.touched' >
-    ❗ Veuillez mettre un email correcte
+    <input
+    type="text"
+    ngModel
+    required
+    email
+    #FirstInput='ngModel'
+    name="email-Input"
+    class="form-control"
+    placeholder="Email"
+    >
+    <br>
+    <input
+    type="password"
+    ngModel
+    required
+    #SecondInput="ngModel"
+    name="password-Input"
+    class="form-control"
+    placeholder="Password"
+    minlength=6
+    >
+    <br>
   </div>
-  <br>
-  <input
-  type="password"
-  ngModel
-  required
-  #SecondInput="ngModel"
-  name="password-Input"
-  class="form-control"
-  placeholder="Password"
-  minlength=6
-  >
-  <div class="alert alert-danger" *ngIf='SecondInput.touched && SecondInput.invalid' >
-    ❗ Veuillez saisir 6 caractères ou plus
-  </div>
-  <br>
+  <div *ngIf='dataLogin.invalid && dataLogin.touched' class="alert alert-danger">l'Email ou le Mot de Passe est Incorecte , Veuillez réessayer</div>
   <button [disabled]="theForm.invalid" class="btn-success" >Log In</button>
 </form>

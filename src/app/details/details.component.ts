@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class DetailsComponent implements OnInit {
 
   DetailList = this.cvService.CVlists
-  theIndex;
+  leIndice;
 
   constructor(
     private cvService: CvServiceService,
@@ -21,11 +21,11 @@ export class DetailsComponent implements OnInit {
   ngOnInit(): void {
     this.activateRoute.params.subscribe(
       (parm)=>{
-        this.theIndex = parm
+        this.leIndice = parm
       }
     )
-    console.log(this.theIndex)
-    console.log(this.DetailList[this.theIndex])
+    console.log(this.leIndice)
+    console.log(this.DetailList[this.leIndice])
   }
 
   Delete(indice) {

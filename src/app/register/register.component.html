@@ -1,0 +1,77 @@
+<h1>Register</h1>
+<form #RegisterForm="ngForm">
+  <div
+    ngModelGroup="RegistrationData"
+    #regisData="ngModelGroup"
+  >
+    <input type="text"
+    email
+    required
+    [(ngModel)]="First"
+    name="Email"
+    #EmailInput="ngModel"
+    placeholder="Veuiller saissir votre Email"
+    class="form-control">
+
+    <input type="text"
+    email
+    required
+    [(ngModel)]="Second"
+    name="EmailConfirm"
+    #EmailConfirmInput="ngModel"
+    placeholder="Veuiller confirmer votre Email"
+    class="form-control">
+
+    <input type="password"
+    pattern
+    ngModel
+    name="Password"
+    #PasswordInput="ngModel"
+    placeholder="Veuillez saisir votre Mot de Passe"
+    minlength=6
+    maxlength=16
+    class="form-control">
+    <br>
+    <div *ngIf="!regisData.valid && !regisData.touched && !regisData.dirty && First !== Second" class="alert alert-danger">L'un de vos Informations est Incorecte ! Veuillez configurer vos Informations</div>
+  </div>
+  <br>
+  <div *ngIf="PasswordInput.valid && PasswordInput.touched && PasswordInput.dirty && First === Second"
+  ngModelGroup="UserData"
+  #UserData="ngModelGroup"
+  >
+  Informations :
+  <input type="text"
+    required
+    ngModel
+    name="Name"
+    #NameInput="ngModel"
+    placeholder="Veuiller saissir votre Nom"
+    class="form-control">
+
+    <input type="text"
+    required
+    ngModel
+    name="First Name"
+    #EmailInput="ngModel"
+    placeholder="Veuiller saissir votre Prénom"
+    class="form-control">
+
+    <input type="text"
+    required
+    ngModel
+    name="Profession"
+    #EmailInput="ngModel"
+    placeholder="Veuiller saissir votre Profession"
+    class="form-control">
+    <input type="text"
+    required
+    ngModel
+    name="Image"
+    #EmailInput="ngModel"
+    placeholder="Veuiller saissir l'URL de votre Image"
+    class="form-control">
+    <br>
+    <div *ngIf='UserData.invalid && UserData.touched && UserData.pristine' class="alert alert-danger">L'un de vos Informations est Incorecte ! Veuillez configurer vos Informations</div>
+</div>
+<button *ngIf="PasswordInput.valid && PasswordInput.touched && PasswordInput.dirty && First === Second" (click)="Add()" class="btn btn-primary">Register</button>
+</form>

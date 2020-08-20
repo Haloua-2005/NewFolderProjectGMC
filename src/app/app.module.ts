@@ -15,7 +15,8 @@ import { ColorChangerComponent } from './color-changer/color-changer.component';
 import { HeaderComponent } from './header/header.component';
 import { NF404Component } from './nf404/nf404.component';
 import { DetailsComponent } from './details/details.component';
-import { EmailVerificationComponent } from './email-verification/email-verification.component'
+import { EmailVerificationComponent } from './email-verification/email-verification.component';
+import { RegisterComponent } from './register/register.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { EmailVerificationComponent } from './email-verification/email-verificat
     HeaderComponent,
     NF404Component,
     DetailsComponent,
-    EmailVerificationComponent
+    EmailVerificationComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

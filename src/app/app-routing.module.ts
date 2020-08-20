@@ -8,6 +8,7 @@ import { ColorChangerComponent } from './color-changer/color-changer.component';
 import { NF404Component } from './nf404/nf404.component';
 import { DetailsComponent } from './details/details.component';
 import { EmailVerificationComponent } from './email-verification/email-verification.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
     {path : 'color/:color', component: ColorChangerComponent}
   ] },
   { path : 'details/:person', component: DetailsComponent },
-  { path : 'login', component: EmailVerificationComponent }
+  { path : 'login', component: EmailVerificationComponent },
+  { path : 'register', component: RegisterComponent }
 
 ];
 
