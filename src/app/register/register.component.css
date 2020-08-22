@@ -6,6 +6,6 @@ h1 {
   text-underline-position: above;
 }
 
-input.ng-invalid.ng-touched {
+input.ng-invalid.ng-touched.ng-pristine {
   border: 1px red solid;
 }

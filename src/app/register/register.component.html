@@ -4,6 +4,7 @@
     ngModelGroup="RegistrationData"
     #regisData="ngModelGroup"
   >
+    Email :
     <input type="text"
     email
     required
@@ -13,6 +14,7 @@
     placeholder="Veuiller saissir votre Email"
     class="form-control">
 
+    Confirmation d'Email :
     <input type="text"
     email
     required
@@ -22,7 +24,9 @@
     placeholder="Veuiller confirmer votre Email"
     class="form-control">
 
+    Mot de Passe :
     <input type="password"
+    required
     pattern
     ngModel
     name="Password"
@@ -32,46 +36,54 @@
     maxlength=16
     class="form-control">
     <br>
-    <div *ngIf="!regisData.valid && !regisData.touched && !regisData.dirty && First !== Second" class="alert alert-danger">L'un de vos Informations est Incorecte ! Veuillez configurer vos Informations</div>
+    <div *ngIf="regisData.invalid && regisData.touched " class="alert alert-danger">L'un de vos Informations est Incorecte ! Veuillez configurer vos Informations .</div>
   </div>
   <br>
-  <div *ngIf="PasswordInput.valid && PasswordInput.touched && PasswordInput.dirty && First === Second"
+  <div
   ngModelGroup="UserData"
   #UserData="ngModelGroup"
   >
-  Informations :
+  Informations : <br>
+
+  Nom :
   <input type="text"
     required
+    pattern
     ngModel
     name="Name"
     #NameInput="ngModel"
     placeholder="Veuiller saissir votre Nom"
     class="form-control">
 
+    Prénom :
     <input type="text"
     required
+    pattern
     ngModel
     name="First Name"
     #EmailInput="ngModel"
     placeholder="Veuiller saissir votre Prénom"
     class="form-control">
 
+    Profession :
     <input type="text"
     required
+    pattern
     ngModel
     name="Profession"
     #EmailInput="ngModel"
     placeholder="Veuiller saissir votre Profession"
     class="form-control">
+
+    Image :
     <input type="text"
-    required
     ngModel
     name="Image"
     #EmailInput="ngModel"
     placeholder="Veuiller saissir l'URL de votre Image"
     class="form-control">
     <br>
-    <div *ngIf='UserData.invalid && UserData.touched && UserData.pristine' class="alert alert-danger">L'un de vos Informations est Incorecte ! Veuillez configurer vos Informations</div>
+    <div *ngIf='UserData.invalid && UserData.touched' class="alert alert-danger">L'un de vos Informations est Incorecte ! Veuillez configurer vos Informations</div>
 </div>
-<button *ngIf="PasswordInput.valid && PasswordInput.touched && PasswordInput.dirty && First === Second" (click)="Add()" class="btn btn-primary">Register</button>
+<button [disabled]="UserData.invalid && UserData.untouched && regisData.invalid && regisData.untouched" (click)="Add()" class="btn btn-primary">Register</button>
 </form>

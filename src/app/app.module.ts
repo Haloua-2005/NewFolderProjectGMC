@@ -16,7 +16,8 @@ import { HeaderComponent } from './header/header.component';
 import { NF404Component } from './nf404/nf404.component';
 import { DetailsComponent } from './details/details.component';
 import { EmailVerificationComponent } from './email-verification/email-verification.component';
-import { RegisterComponent } from './register/register.component'
+import { RegisterComponent } from './register/register.component';
+import { AsyncPipeComponent } from './async-pipe/async-pipe.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { RegisterComponent } from './register/register.component'
     NF404Component,
     DetailsComponent,
     EmailVerificationComponent,
-    RegisterComponent
+    RegisterComponent,
+    AsyncPipeComponent
   ],
   imports: [
     BrowserModule,

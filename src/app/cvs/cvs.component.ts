@@ -31,6 +31,7 @@ export class CVsComponent implements OnInit {
     }
 
   ngOnInit(): void {
+    console.log(this.theHireList)
   }
 
   goLink(value) {
