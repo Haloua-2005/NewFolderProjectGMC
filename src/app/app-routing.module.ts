@@ -9,6 +9,7 @@ import { NF404Component } from './nf404/nf404.component';
 import { DetailsComponent } from './details/details.component';
 import { EmailVerificationComponent } from './email-verification/email-verification.component';
 import { RegisterComponent } from './register/register.component';
+import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
   ] },
   { path : 'details/:person', component: DetailsComponent },
   { path : 'login', component: EmailVerificationComponent },
-  { path : 'register', component: RegisterComponent }
+  { path : 'register', component: RegisterComponent },
+  { path : 'asyncpipe', component: AsyncPipeComponent }
 
 ];
 

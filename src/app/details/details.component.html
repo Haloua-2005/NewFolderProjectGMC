@@ -1,5 +1,5 @@
-<img src="{{DetailList[leIndice]?.image}}"> <br>
-Name : {{DetailList[leIndice]?.Name}} <br>
-First Name : {{DetailList[leIndice]?.FirstName}} <br>
+<img src="{{DetailList[leIndice]?.image | defaultImage}}"> <br>
+Name : {{DetailList[leIndice]?.Name | uppercase}} <br>
+First Name : {{DetailList[leIndice]?.FirstName | titlecase}} <br>
 Occupation : {{DetailList[leIndice]?.Occupation}} <br>
 <button (click)="Delete(leIndice)" class="btn btn-primary">Delete</button>
