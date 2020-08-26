@@ -34,7 +34,9 @@ export class CVsComponent implements OnInit {
     console.log(this.theHireList)
   }
 
+
   goLink(value) {
+    this.cvservice.onClick(this.theHireList[value])
     const LINK=['details',value]
     this.router.navigate(LINK)
   }

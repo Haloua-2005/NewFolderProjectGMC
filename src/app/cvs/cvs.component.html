@@ -14,12 +14,12 @@
     </div>
     <div class="col-mid-6">
       <ul class="list-group" > <h2> |~~ Hired CVs ~~| </h2>
-        <li class="list-group-item tt" *ngFor="let list of theHireList;let i=index">
+        <li (click)="goLink(i)" class="list-group-item tt" *ngFor="let list of theHireList;let i=index">
           <img src="{{list.image}}">
           {{list.Name}}
           {{list.FirstName}}
           {{list.Occupation}}
-          ✔️ | <button (click)="goLink(i)">👁</button>
+          ✔️
         </li>
       </ul>
     </div>

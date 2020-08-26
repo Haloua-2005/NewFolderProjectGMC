@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Person } from '../attributes/Person';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,12 @@ export class CvServiceService {
 
 
   CVlists = [this.hedi,this.taher]
+
+  ItemSubject = new Subject<Person>()
+
+  onClick(personne: Person) {
+    this.ItemSubject.next(personne)
+  }
 
 
   constructor() { }
