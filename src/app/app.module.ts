@@ -17,7 +17,8 @@ import { NF404Component } from './nf404/nf404.component';
 import { DetailsComponent } from './details/details.component';
 import { EmailVerificationComponent } from './email-verification/email-verification.component';
 import { RegisterComponent } from './register/register.component';
-import { AsyncPipeComponent } from './async-pipe/async-pipe.component'
+import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AsyncPipeComponent } from './async-pipe/async-pipe.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

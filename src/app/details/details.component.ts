@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CvServiceService } from '../Services/cv-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Person } from '../attributes/Person';
 
 @Component({
   selector: 'app-details',
@@ -11,7 +12,7 @@ export class DetailsComponent implements OnInit {
 
   DetailList = this.cvService.CVlists
   leIndice;
-  thePersone;
+  thePersone:Person;
 
   constructor(
     private cvService: CvServiceService,
@@ -21,13 +22,13 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activateRoute.params.subscribe(
-      (parm )=> {
+      (parm) => {
         this.leIndice = parm
       })
       this.cvService.ItemSubject.subscribe(
         (personne) => this.thePersone = personne
       )
-  //   )
+      console.log(this.thePersone)
   //   console.log(this.leIndice)
   //   console.log(this.DetailList[this.leIndice])
   }
