@@ -1,51 +1,9 @@
 <h1>Register</h1>
 <form #RegisterForm="ngForm">
-  <div
-    ngModelGroup="RegistrationData"
-    #regisData="ngModelGroup"
-  >
-    Email :
-    <input type="text"
-    email
-    required
-    [(ngModel)]="First"
-    name="Email"
-    #EmailInput="ngModel"
-    placeholder="Veuiller saissir votre Email"
-    class="form-control">
 
-    Confirmation d'Email :
-    <input type="text"
-    email
-    required
-    [(ngModel)]="Second"
-    name="EmailConfirm"
-    #EmailConfirmInput="ngModel"
-    placeholder="Veuiller confirmer votre Email"
-    class="form-control">
+  <h3>>Informations</h3> : <br>
 
-    Mot de Passe :
-    <input type="password"
-    required
-    pattern
-    ngModel
-    name="Password"
-    #PasswordInput="ngModel"
-    placeholder="Veuillez saisir votre Mot de Passe"
-    minlength=6
-    maxlength=16
-    class="form-control">
-    <br>
-    <div *ngIf="regisData.invalid && regisData.touched " class="alert alert-danger">L'un de vos Informations est Incorecte ! Veuillez configurer vos Informations .</div>
-  </div>
-  <br>
-  <div
-  ngModelGroup="UserData"
-  #UserData="ngModelGroup"
-  >
-  Informations : <br>
-
-  Nom :
+  >Nom :
   <input type="text"
     required
     pattern
@@ -55,7 +13,7 @@
     placeholder="Veuiller saissir votre Nom"
     class="form-control">
 
-    Prénom :
+    >Prénom :
     <input type="text"
     required
     pattern
@@ -65,25 +23,44 @@
     placeholder="Veuiller saissir votre Prénom"
     class="form-control">
 
-    Profession :
+    >Job :
     <input type="text"
     required
     pattern
     ngModel
-    name="Profession"
+    name="Job"
     #EmailInput="ngModel"
-    placeholder="Veuiller saissir votre Profession"
+    placeholder="Veuiller saissir votre Job"
     class="form-control">
 
-    Image :
+    >Age:
+    <input type="number"
+    required
+    pattern
+    ngModel
+    name="Age"
+    #EmailInput="ngModel"
+    placeholder="Veuiller saissir votre Age"
+    class="form-control">
+
+    >CIN:
+    <input type="number"
+    required
+    pattern
+    ngModel
+    name="CIN"
+    #EmailInput="ngModel"
+    placeholder="Veuiller saissir votre CIN"
+    class="form-control">
+
+    >Path (Image):
     <input type="text"
     ngModel
-    name="Image"
+    name="Path"
     #EmailInput="ngModel"
-    placeholder="Veuiller saissir l'URL de votre Image"
+    placeholder="Veuiller saissir le Path"
     class="form-control">
     <br>
-    <div *ngIf='UserData.invalid && UserData.touched' class="alert alert-danger">L'un de vos Informations est Incorecte ! Veuillez configurer vos Informations</div>
-</div>
-<button [disabled]="UserData.invalid && UserData.untouched && regisData.invalid && regisData.untouched" (click)="Add()" class="btn btn-primary">Register</button>
+    <div *ngIf='RegisterForm.invalid && RegisterForm.touched' class="alert alert-danger">L'un de vos Informations est Incorecte ! Veuillez configurer vos Informations</div>
+<button [disabled]="RegisterForm.invalid && RegisterForm.untouched" (click)="addNewPerson(RegisterForm.value)" class="btn btn-primary">Register</button>
 </form>

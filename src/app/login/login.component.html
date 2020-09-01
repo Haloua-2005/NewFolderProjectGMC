@@ -1,0 +1,27 @@
+<form #LoginForm = 'ngForm'>
+
+  >Email :
+  <input type="text"
+  email
+  required
+  ngModel
+  name="email"
+  #EmailInput="ngModel"
+  placeholder="Veuiller saissir votre Email"
+  class="form-control">
+
+  >Mot de Passe :
+  <input type="password"
+  required
+  pattern
+  ngModel
+  name="password"
+  #PasswordInput="ngModel"
+  placeholder="Veuillez saissir votre Mot de Passe"
+  minlength=4
+  maxlength=16
+  class="form-control">
+  <br>
+  <div *ngIf="LoginForm.invalid && LoginForm.touched " class="alert alert-danger">L'un de vos Informations est Incorecte ! Veuillez configurer vos Informations .</div>
+  <button class="btn btn-primary" [disabled]="LoginForm.invalid && LoginForm.touched" (click)="login(LoginForm)" >LogIn</button>
+</form>

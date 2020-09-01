@@ -1,17 +1,23 @@
 export class Person {
   Name:string
   FirstName:string
-  Occupation:string
-  Image:string
+  CIN:number
+  Job:string
+  Path:any
+  Age:number
   constructor(
-    public name:string,
-    public firstname:string,
-    public occupation:string,
-    public image:string
+    private name:string,
+    private firstname:string,
+    private cin:number,
+    private job:string,
+    private path:any,
+    private age:number,
   ) {
     this.Name = name
     this.FirstName = firstname
-    this.Occupation = occupation
-    this.Image = image
+    this.CIN = cin
+    this.Job = job
+    this.Path = path
+    this.Age = age
   }
 }

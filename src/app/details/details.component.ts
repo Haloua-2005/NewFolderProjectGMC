@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input } from '@angular/core';
 import { CvServiceService } from '../Services/cv-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Person } from '../attributes/Person';
+import { HiringServiceService } from '../Services/hiring-service.service';
 
 @Component({
   selector: 'app-details',
@@ -10,12 +11,15 @@ import { Person } from '../attributes/Person';
 })
 export class DetailsComponent implements OnInit {
 
+  @Input() theList;
+
   DetailList = this.cvService.CVlists
   leIndice;
   thePersone:Person;
 
   constructor(
     private cvService: CvServiceService,
+    private hireservice:HiringServiceService,
     private activateRoute: ActivatedRoute,
     private route:Router
   ) { }
@@ -33,10 +37,18 @@ export class DetailsComponent implements OnInit {
   //   console.log(this.DetailList[this.leIndice])
   }
 
+  HirePerson() {
+    this.cvService.ItemSubject.subscribe(
+      (personne) => {
+        this.hireservice.Push(personne)
+        this.theList.splice(this.leIndice,1)
+      }
+    )
+    this.cvService.onClick(this.theList[this.leIndice])
+  }
+
   Delete() {
-    const LINK=['cv']
-    this.DetailList.splice(this.leIndice,1)
-    this.route.navigate(LINK)
+    this.theList.splice(this.leIndice,1)
   }
 
 }

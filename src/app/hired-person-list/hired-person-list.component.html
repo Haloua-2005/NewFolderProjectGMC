@@ -1,0 +1,8 @@
+<ul class="list-group">
+  <h2> |~~ Hired CVs ~~| </h2>
+  <li class="list-group-item tt" *ngFor="let list of theHireList;let i=index">
+    <img src="{{list.Path}}">
+    {{list.Name | uppercase}}
+    {{list.FirstName | titlecase}}
+  </li>
+</ul>

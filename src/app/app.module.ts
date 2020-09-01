@@ -18,7 +18,9 @@ import { DetailsComponent } from './details/details.component';
 import { EmailVerificationComponent } from './email-verification/email-verification.component';
 import { RegisterComponent } from './register/register.component';
 import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { HiredPersonListComponent } from './hired-person-list/hired-person-list.component'
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { HttpClientModule } from '@angular/common/http'
     DetailsComponent,
     EmailVerificationComponent,
     RegisterComponent,
-    AsyncPipeComponent
+    AsyncPipeComponent,
+    LoginComponent,
+    HiredPersonListComponent
   ],
   imports: [
     BrowserModule,

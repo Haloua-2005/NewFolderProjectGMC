@@ -1,27 +1,17 @@
 
 <div *ngIf='true' class="Hire">
   <div class="row">
-    <div  class="col-mid-6">
+    <div  class="col-mid-4">
       <ul class="list-group"> <h2> |~~ CVs ~~| </h2>
-        <li class="list-group-item tt" *ngFor="let list of theCVlist;let indice=index">
-          <img src="{{list.image}}">
-          {{list.Name}}
-          {{list.FirstName}} /
-          {{list.Occupation}}
-          <button class="btn btn-primary" (click)="push(indice)" >Embaucher</button>
+        <li class="list-group-item tt" (click)="goLink(indice)" *ngFor="let list of theCVlist;let indice=index">
+          <img src="{{list.Path}}">
+          {{list.Name | uppercase}}
+          {{list.FirstName | titlecase}}
         </li>
       </ul>
     </div>
-    <div class="col-mid-6">
-      <ul class="list-group" > <h2> |~~ Hired CVs ~~| </h2>
-        <li (click)="goLink(i)" class="list-group-item tt" *ngFor="let list of theHireList;let i=index">
-          <img src="{{list.image}}">
-          {{list.Name}}
-          {{list.FirstName}}
-          {{list.Occupation}}
-          ✔️
-        </li>
-      </ul>
+    <div class="col-mid-8">
+      <app-details *ngIf="detailbool" [theList]="theCVlist"></app-details>
     </div>
   </div>
 </div>
@@ -35,4 +25,5 @@
 
 <button *ngIf="false" (click)="goTO()" class="btn btn-primary">go to ngIf Compenent</button>
 
-<router-outlet></router-outlet>
+
+

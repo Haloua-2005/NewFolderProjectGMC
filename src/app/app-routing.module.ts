@@ -10,20 +10,26 @@ import { DetailsComponent } from './details/details.component';
 import { EmailVerificationComponent } from './email-verification/email-verification.component';
 import { RegisterComponent } from './register/register.component';
 import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
+import { LoginComponent } from './login/login.component';
+import { HiredPersonListComponent } from './hired-person-list/hired-person-list.component';
 
 
 const routes: Routes = [
+  { path : "", redirectTo:'cv', pathMatch:'full'},
   { path : 'cv', component: CVsComponent, children: [
+    { path : 'cv', redirectTo:'cv/HPL'},
+
+    { path : 'details/:person', component: DetailsComponent },
     { path : 'ngIf', component: NgIfComponent },
   ] },
   { path : 'ngStyle', component: NgStyleComponent, children:[
     {path : 'color/:color', component: ColorChangerComponent}
   ] },
-  { path : 'details/:person', component: DetailsComponent },
   { path : 'login', component: EmailVerificationComponent },
   { path : 'register', component: RegisterComponent },
-  { path : 'asyncpipe', component: AsyncPipeComponent }
-
+  { path : 'asyncpipe', component: AsyncPipeComponent },
+  { path : 'Login', component: LoginComponent },
+  { path : 'HPL', component: HiredPersonListComponent}
 ];
 
 @NgModule({

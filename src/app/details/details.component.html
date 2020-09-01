@@ -1,5 +1,8 @@
-<img src="{{thePersone.Image}}"> <br>
+<img src="{{thePersone.Path}}"> <br>
 Name : {{thePersone.Name | uppercase}} <br>
 First Name : {{thePersone.FirstName | titlecase}} <br>
-Occupation : {{thePersone.Occupation | lowercase }} <br>
+CIN : {{thePersone.CIN}} <br>
+Job : {{thePersone.Job | lowercase }} <br>
+Age : {{thePersone.Age}}<br>
+<button (click)="HirePerson()" class="btn btn-primary">Hire</button>
 <button (click)="Delete()" class="btn btn-primary">Delete</button>
