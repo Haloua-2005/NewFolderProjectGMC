@@ -24,6 +24,6 @@ export class AuthentificationService {
 
   LogOUT() {
     localStorage.removeItem('token')
-    this.router.navigate(['login'])
+    this.router.navigate(['Login'])
   }
 }

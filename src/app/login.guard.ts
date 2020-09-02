@@ -16,7 +16,7 @@ export class LoginGuard implements CanActivate {
       return true
     } else {
       alert("You must Login !")
-      this.router.navigate(['login'])
+      this.router.navigate(['Login'])
       return false
     }
   }
