@@ -12,6 +12,8 @@ import { RegisterComponent } from './register/register.component';
 import { AsyncPipeComponent } from './async-pipe/async-pipe.component';
 import { LoginComponent } from './login/login.component';
 import { HiredPersonListComponent } from './hired-person-list/hired-person-list.component';
+import { LoginGuard } from './login.guard';
+import { LogoutGuard } from './logout.guard';
 
 
 const routes: Routes = [
@@ -26,9 +28,9 @@ const routes: Routes = [
     {path : 'color/:color', component: ColorChangerComponent}
   ] },
   { path : 'login', component: EmailVerificationComponent },
-  { path : 'register', component: RegisterComponent },
+  { path : 'register', component: RegisterComponent, canActivate:[LoginGuard] },
   { path : 'asyncpipe', component: AsyncPipeComponent },
-  { path : 'Login', component: LoginComponent },
+  { path : 'Login', component: LoginComponent, canActivate:[LogoutGuard] },
   { path : 'HPL', component: HiredPersonListComponent}
 ];
 

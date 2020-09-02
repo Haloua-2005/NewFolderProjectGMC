@@ -15,10 +15,12 @@
         <a class="nav-link" [routerLink]="['asyncpipe']">AsyncPipe</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['Login']">LogIn</a>
+        <a class="nav-link" [routerLink]="['HPL']">Hired Persons</a>
+      </li>      <li class="nav-item">
+        <a *ngIf='!authService.isAuthenficated()' class="nav-link" [routerLink]="['Login']">LogIn</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['HPL']">Hired Persons</a>
+        <a *ngIf='authService.isAuthenficated()' class="nav-link" (click)='logout()'>LogOut</a>
       </li>
     </ul>
   </div>
